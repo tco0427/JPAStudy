@@ -8,9 +8,18 @@ import javax.persistence.Id;
 @Entity
 public class Member {
 
+
     @Id
     private Long id;
     private String name;
+
+    //기본 생성자가 꼭 필요함
+    public Member(){}
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
